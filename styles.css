@@ -1,0 +1,123 @@
+/* Estilos generales */
+body {
+    background-color: #0d0d0d;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #00ffcc;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.games {
+    padding: 20px;
+    text-align: center;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 30px; /* Espacio entre los cuadros */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+.game-card {
+    background-color: #1a1a1a;
+    border: 1px solid #00ffcc;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    width: 90%; /* Ocupa todo el espacio disponible */
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.game-title {
+    font-size: 1.5rem;
+    color: #00ffcc;
+    margin: 0;
+}
+
+.play-button {
+    background-color: #00ffcc;
+    color: #0d0d0d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #00ccff;
+    box-shadow:
+        0 0 5px #00ffcc,
+        0 0 10px #00ffcc,
+        0 0 20px #00ffcc;
+}
+
+.game-description {
+    max-height: 200px; /* Altura fija para la descripción */
+    overflow-y: auto; /* Barra de desplazamiento vertical */
+    padding-right: 10px; /* Espacio para la barra de desplazamiento */
+}
+
+.full-description {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-top: 2px solid #00ffcc;
+    margin-top: 50px;
+}
+
+/* Efectos de neón */
+.neon-text {
+    color: #fff;
+    text-shadow:
+        0 0 5px #00ffcc,
+        0 0 10px #00ffcc,
+        0 0 20px #00ffcc,
+        0 0 40px #00ffcc;
+}
+
+/* Estilos para la barra de desplazamiento */
+.game-description::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.game-description::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Color de fondo de la barra */
+}
+
+.game-description::-webkit-scrollbar-thumb {
+    background: #00ffcc; /* Color del "pulgarcito" */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.game-description::-webkit-scrollbar-thumb:hover {
+    background: #00ccff; /* Color al pasar el ratón */
+}

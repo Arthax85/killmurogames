@@ -1,123 +1,212 @@
-/* Estilos generales */
 body {
-    background-color: #0d0d0d;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #1a1a1a, #000000);
+    color: #ffffff;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-bottom: 2px solid #00ffcc;
-}
-
-h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.games {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
     padding: 20px;
     text-align: center;
 }
 
-.game-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    gap: 30px; /* Espacio entre los cuadros */
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor */
-    padding: 0 20px; /* Espaciado lateral */
-}
-
-.game-card {
-    background-color: #1a1a1a;
-    border: 1px solid #00ffcc;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    width: 90%; /* Ocupa todo el espacio disponible */
-}
-
-.game-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.game-title {
-    font-size: 1.5rem;
-    color: #00ffcc;
+header h1 {
     margin: 0;
+    font-size: 3em;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF;
 }
 
-.play-button {
-    background-color: #00ffcc;
-    color: #0d0d0d;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
+nav {
+    margin: 10px 0;
+}
+
+nav .category {
+    color: #007BFF;
     text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav .category:hover {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+}
+
+.search-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border: 1px solid #444;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.play-button:hover {
-    background-color: #00ccff;
-    box-shadow:
-        0 0 5px #00ffcc,
-        0 0 10px #00ffcc,
-        0 0 20px #00ffcc;
+.search-container button:hover {
+    background-color: #00ff88;
+    box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
 }
 
-.game-description {
-    max-height: 200px; /* Altura fija para la descripción */
-    overflow-y: auto; /* Barra de desplazamiento vertical */
-    padding-right: 10px; /* Espacio para la barra de desplazamiento */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
 }
 
-.full-description {
-    margin-top: 15px;
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.product {
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px; /* Ajusta el ancho para que todos los cuadros sean iguales */
+    height: 150px; /* Ajusta la altura para que todos los cuadros sean iguales */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Añade posición relativa para el contenido interno */
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo específico para el cuadro de World of Warcraft */
+.product-wow {
+    background-image: url('images/wowidle.png'); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo específico para el cuadro de El enigma de Aceps */
+.product-aceps {
+    background-image: url('images/enigma.png'); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo específico para el cuadro de Las Crónicas de Eldoria */
+.product-cronicas {
+    background-image: url('images/cronicas.png'); /* Ruta a tu imagen */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Fondo oscuro semi-transparente para mejorar la legibilidad */
+.product-wow::before,
+.product-aceps::before,
+.product-cronicas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 1; /* Coloca el fondo detrás del contenido */
+}
+
+/* Asegura que el contenido esté por encima del fondo */
+.product-wow h2,
+.product-aceps h2,
+.product-cronicas h2 {
+    position: relative; /* Asegura que el contenido esté por encima de la imagen */
+    z-index: 2; /* Coloca el contenido por encima del fondo */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    padding: 5px 10px; /* Espaciado interno para el texto */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Asegura que el fondo solo cubra el texto */
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+.product-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+.product-info a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.product-info a:hover {
+    color: #00ff88;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #007BFF, 0 0 30px #007BFF;
 }
 
 footer {
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    background-color: #1a1a1a;
-    border-top: 2px solid #00ffcc;
-    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #444;
 }
 
-/* Efectos de neón */
-.neon-text {
-    color: #fff;
-    text-shadow:
-        0 0 5px #00ffcc,
-        0 0 10px #00ffcc,
-        0 0 20px #00ffcc,
-        0 0 40px #00ffcc;
+.footer-links {
+    margin-bottom: 10px;
 }
 
-/* Estilos para la barra de desplazamiento */
-.game-description::-webkit-scrollbar {
-    width: 8px; /* Ancho de la barra de desplazamiento */
+.footer-links a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.game-description::-webkit-scrollbar-track {
-    background: #1a1a1a; /* Color de fondo de la barra */
+.footer-links a:hover {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
 }
 
-.game-description::-webkit-scrollbar-thumb {
-    background: #00ffcc; /* Color del "pulgarcito" */
-    border-radius: 4px; /* Bordes redondeados */
+.footer-info {
+    color: #888;
+    font-size: 0.9em;
 }
 
-.game-description::-webkit-scrollbar-thumb:hover {
-    background: #00ccff; /* Color al pasar el ratón */
+.footer-info a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-info a:hover {
+    color: #00ff88;
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
 }

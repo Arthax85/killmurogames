@@ -27,6 +27,6 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 5000); // Cambia de slide cada 5 segundos
+setInterval(nextSlide, 5000);
 
-showSlide(currentSlide); // Muestra el primer slide al cargar la página
+showSlide(currentSlide);

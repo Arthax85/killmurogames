@@ -100,21 +100,21 @@ nav .category:hover {
 
 /* Estilo específico para el cuadro de World of Warcraft */
 .product-wow {
-    background-image: url('images/wowidle.png'); /* Ruta a tu imagen */
+    background-image: url('wowidle.png'); /* Ruta a tu imagen */
     background-size: cover;
     background-position: center;
 }
 
 /* Estilo específico para el cuadro de El enigma de Aceps */
 .product-aceps {
-    background-image: url('images/enigma.png'); /* Ruta a tu imagen */
+    background-image: url('enigma.png'); /* Ruta a tu imagen */
     background-size: cover;
     background-position: center;
 }
 
 /* Estilo específico para el cuadro de Las Crónicas de Eldoria */
 .product-cronicas {
-    background-image: url('images/cronicas.png'); /* Ruta a tu imagen */
+    background-image: url('cronicas.png'); /* Ruta a tu imagen */
     background-size: cover;
     background-position: center;
 }

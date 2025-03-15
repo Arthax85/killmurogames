@@ -193,6 +193,7 @@ main {
     color: #00ff88;
 }
 
+
 /* Sección de Noticias y Actualizaciones */
 .news-section {
     margin-top: 40px;
@@ -555,4 +556,82 @@ footer {
 .footer-info a:hover {
     color: #00ff88;
     text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
+}
+
+/* Estilos para la página de la tienda */
+.store-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(26, 26, 26, 0.8);
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.store-section h2 {
+    font-size: 2em;
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.store-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #007BFF, 0 0 20px #007BFF;
+}
+
+.product-item h3 {
+    font-size: 1.5em;
+    color: #00ff88;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #007BFF;
+    margin-bottom: 15px;
+}
+
+.product-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.buy-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #00ff88;
+    box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
 }
